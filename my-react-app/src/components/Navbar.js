@@ -1,20 +1,35 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Menu = () => (
-  <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="#">Dutch Teacher</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href="#schrijven">Schrijven</Nav.Link>
-        <Nav.Link href="#spreken">Spreken</Nav.Link>
-        <Nav.Link href="#luisteren">Luisteren</Nav.Link>
-        <Nav.Link href="#lezen">Lezen</Nav.Link>
-        <Nav.Link href="#knm">KNM</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
-);
+const Navbar = () => {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">Dutch Teacher</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">Schrijven</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Spreken</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Luisteren</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Lezen</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">KNM</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
-export default Menu;
+export default Navbar;
+

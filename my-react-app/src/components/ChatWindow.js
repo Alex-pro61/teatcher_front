@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
 
-const ChatWindow = () => {
-  const [teacherText, setTeacherText] = useState('');
-  const [studentText, setStudentText] = useState('');
+function ChatWindow() {
+  const [userText, setUserText] = useState('');
 
   return (
     <div className="chat-window">
-      <div className="teacher-chat">
-        <p>{teacherText || "Тут буде відповідь ChatGPT"}</p>
-      </div>
-      <div className="student-chat">
-        <input 
-          type="text" 
-          placeholder="Введіть свою відповідь" 
-          value={studentText}
-          onChange={(e) => setStudentText(e.target.value)} 
-        />
-      </div>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Введіть свою відповідь"
+        value={userText}
+        onChange={(e) => setUserText(e.target.value)}
+      />
+      <button className="btn btn-primary mt-2">Підключитися</button>
     </div>
   );
-};
+}
 
 export default ChatWindow;
+

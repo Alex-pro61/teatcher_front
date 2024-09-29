@@ -3,9 +3,10 @@ import React from 'react';
 const Controls = () => {
   return (
     <div className="controls">
-      <button>Мікрофон</button>
-      <button>Камера</button>
-      <button>Завершити розмову</button>
+      <button className="btn btn-primary">Підключитися</button>
+      <button className="btn btn-secondary">Мікрофон</button>
+      <button className="btn btn-danger">Завершити розмову</button>
+
     </div>
   );
 };
